@@ -1,0 +1,1 @@
+web: gunicorn shopy_science_api.wsgi --log-file -
