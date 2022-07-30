@@ -15,6 +15,7 @@ from pathlib import Path
 from django import conf
 from decouple import config
 from dj_database_url import parse as dburl
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -96,6 +97,7 @@ default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
     'default': config('DATABASE_URL', default=default_dburl, cast=dburl)
 }
+
 """ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -176,3 +178,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     ]
 }
+
+LOGIN_URL = 'https://shopyscience.herokuapp.com/authentication/login'
