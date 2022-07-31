@@ -17,21 +17,3 @@ class Order(models.Model):
 
     def __unicode__(self):
         return self.OrderID
-
-""" class OrderCSV(models.Model):
-    order = models.IntegerField()
-    delivery_name = models.CharField(max_length=50)  
-    delivery_address = models.CharField(max_length=50)  
-    delivery_country = models.CharField(max_length=50)  
-    delivery_zipcode = models.IntegerField()  
-    delivery_city = models.CharField(max_length=50)  
-    items_count = models.IntegerField()  
-    item_index = models.ManyToManyField(OrderedItem, related_name="itemindex", db_constraint=True) 
-    item_id = models.ManyToManyField(OrderedItem, related_name="itemid", db_constraint=True) 
-    item_quantity = models.ManyToManyField(OrderedItem, related_name="itemquantity", db_constraint=True) 
-    line_price_excl_vat = models.FloatField()  
-    line_price_incl_vat = models.FloatField()  
-
-
-    def __unicode__(self):
-        return self.order """
